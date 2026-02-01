@@ -38,7 +38,27 @@
   <!-- Main Content -->
   <main id="main">
     <heading-anchors>
-      {{ content | safe }}
+
+      {# Conteúdo do campo services #}
+      {% if services %}
+        <section class="home-section section-white reveal">
+          {{ services | safe }}
+        </section>
+      {% endif %}
+
+      {# Conteúdo do campo upcoming_events #}
+      {% if upcoming_events %}
+        <section class="home-section section-magenta reveal">
+          {{ upcoming_events | safe }}
+        </section>
+      {% endif %}
+
+      {# Corpo do markdown, caso exista #}
+      {% if content %}
+        <section class="home-section reveal">
+          {{ content | safe }}
+        </section>
+      {% endif %}
     </heading-anchors>
   </main>
 
