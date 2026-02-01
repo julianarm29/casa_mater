@@ -58,12 +58,8 @@ content:
           - { name: key, label: Key, type: string }
           - { name: order, label: Order, type: number }
         }
-      - name: services
-        label: Serviços
-        type: rich-text
-      - name: upcoming_events
-        label: Próximos eventos
-        type: rich-text
+      - { name: body, label: Corpo do conteúdo, type: rich-text }
+
 
   # === Contato ===
   - name: contato
