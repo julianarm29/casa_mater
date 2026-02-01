@@ -1,11 +1,7 @@
 ---
-title: Contato
 layout: layouts/base.njk
 eleventyNavigation:
   key: Contato
-  order: 5
+  order: 4
 ---
-
-## Contato
-
-Email, redes sociais ou formulário.
+<p>Formulário, endereço e telefone aqui</p>

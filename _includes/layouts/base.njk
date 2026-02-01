@@ -39,26 +39,45 @@
   <main id="main">
     <heading-anchors>
 
-      {# Conteúdo do campo services #}
+      {# HOME: slides e seções opcionais #}
+      {% if slides %}
+        <section class="hero-slider reveal">
+          {{ slides | safe }}
+        </section>
+      {% endif %}
+
+      {% if home_section_1 %}
+        <section class="home-section section-white reveal">
+          {{ home_section_1 | safe }}
+        </section>
+      {% endif %}
+
+      {% if home_section_2 %}
+        <section class="home-section section-magenta reveal">
+          {{ home_section_2 | safe }}
+        </section>
+      {% endif %}
+
+      {# SERVIÇOS #}
       {% if services %}
         <section class="home-section section-white reveal">
           {{ services | safe }}
         </section>
       {% endif %}
 
-      {# Conteúdo do campo upcoming_events #}
       {% if upcoming_events %}
         <section class="home-section section-magenta reveal">
           {{ upcoming_events | safe }}
         </section>
       {% endif %}
 
-      {# Corpo do markdown, caso exista #}
+      {# PÁGINAS GERAIS: Contato, Quem Somos, etc #}
       {% if content %}
         <section class="home-section reveal">
           {{ content | safe }}
         </section>
       {% endif %}
+
     </heading-anchors>
   </main>
 

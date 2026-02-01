@@ -1,12 +1,8 @@
 ---
-title: Quem somos
 layout: layouts/base.njk
 eleventyNavigation:
-  key: Quem somos
+  key: Quiénes Somos
   order: 2
 ---
-
-
-## Quem somos
-
-Escreva aqui sobre a empresa ou projeto.
+<p>Equipe Casa Mater</p>
+<p>Nuestros socios</p>
