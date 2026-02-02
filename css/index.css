@@ -517,3 +517,65 @@ code {
 		gap: 3rem;
 	}
 }
+
+/* ===== PÁGINAS DE CONTEÚDO (Quem Somos etc) ===== */
+
+.page-title {
+	font-size: 2.5rem;
+	margin-bottom: 2rem;
+	font-weight: 700;
+	color:#455e3e
+}
+
+.home-section p,
+.page-content p,
+main p {
+	text-align: justify;
+	line-height: 1.7;
+	margin-bottom: 1.2rem;
+	font-family: var(--font-family);
+	color: black
+}
+
+/* primeiro parágrafo com mais presença */
+.lead {
+	font-size: 1.1rem;
+}
+
+/* destaque da marca */
+.brand-highlight {
+	color: var(--menu-link-color); 
+	font-weight: 700;
+}
+
+.about-split {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 3rem;
+	align-items: center;
+}
+
+/* texto */
+.about-text p {
+	text-align: justify;
+	line-height: 1.7;
+}
+
+/* imagem */
+.about-image img {
+	width: 100%;
+	height: auto;
+	border-radius: 8px;
+	object-fit: cover;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+	.about-split {
+		grid-template-columns: 1fr;
+	}
+
+	.about-image {
+		order: -1; /* imagem sobe no mobile */
+	}
+}
