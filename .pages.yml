@@ -68,10 +68,18 @@ content:
     path: content/contato/index.md
     fields:
       - { name: layout, type: string, hidden: true, default: layouts/base.njk }
-      - { name: eleventyNavigation, label: Navigation, type: object, fields:
+  
+      - name: title
+        label: Título da página
+        type: string
+  
+      - name: eleventyNavigation
+        label: Navigation
+        type: object
+        fields:
           - { name: key, label: Key, type: string }
           - { name: order, label: Order, type: number }
-        }
+  
       - name: body
         label: Corpo do conteúdo
         type: rich-text
