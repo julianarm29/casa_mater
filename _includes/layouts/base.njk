@@ -74,8 +74,15 @@
       {# PÁGINAS GERAIS: Contato, Quem Somos, etc #}
       {% if content %}
         <section class="home-section reveal">
-          {{ content | safe }}
-        </section>
+          <div class="content">
+
+            {% if title %}
+              <h1 class="page-title">{{ title }}</h1>
+            {% endif %}
+
+            {{ content | safe }}
+    </div>
+  </section>
       {% endif %}
 
     </heading-anchors>
