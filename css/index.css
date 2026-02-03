@@ -657,20 +657,117 @@ main p {
 }
 
 /* imagem */
-.about-image img {
+/* container da imagem */
+.about-image {
 	width: 100%;
+	/* altura automática, não corta a imagem */
 	height: auto;
-	border-radius: 8px;
-	object-fit: cover;
+	max-height: 500px; /* opcional: define altura máxima */
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-/* mobile */
+/* imagem em si */
+.about-image img {
+	width: 100%;       /* preenche horizontalmente */
+	height: auto;      /* mantém proporção original */
+	border-radius: 12px;
+	object-fit: contain; /* não corta, mostra toda a imagem */
+}
+
+
+.reveal-img,
+.reveal-text {
+	opacity: 0;
+	transform: translateY(30px);
+	transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.is-visible .reveal-img {
+	opacity: 1;
+	transform: translateY(0);
+	transition-delay: 0.1s;
+}
+
+.is-visible .reveal-text {
+	opacity: 1;
+	transform: translateY(0);
+	transition-delay: 0.35s;
+}
+
+.about-section {
+	padding: 6rem 1.5rem;
+}
+
+.section-light {
+	background-color: #ffffff;
+}
+
+.section-green-soft {
+	background-color: #f3f6f2;
+}
+
+/* ===== SOBRE NÓS - LAYOUT LADO A LADO ===== */
+
+.about-split {
+	display: flex;               /* Flex para alinhar horizontalmente */
+	align-items: center;         /* Centraliza verticalmente */
+	gap: 3rem;
+	margin-bottom: 4rem;
+}
+
+/* Inverte a ordem do segundo bloco */
+.about-split.reverse {
+	flex-direction: row-reverse;
+}
+
+/* Texto */
+.about-text {
+	flex: 1;                     /* Ocupa metade do espaço */
+}
+
+/* Imagem */
+.about-image {
+	flex: 1;                     /* Ocupa metade do espaço */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.about-image img {
+	width: 100%;                 /* Preenche o container */
+	height: auto;                /* Mantém proporção */
+	border-radius: 8px;
+	object-fit: contain;         /* Não corta a imagem */
+}
+
+/* Animação de aparição */
+.reveal-img, .reveal-text {
+	opacity: 0;
+	transform: translateY(30px);
+	transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-img.is-visible,
+.reveal-text.is-visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+/* Mobile */
 @media (max-width: 768px) {
-	.about-split {
-		grid-template-columns: 1fr;
+	.about-split,
+	.about-split.reverse {
+		flex-direction: column;
+	}
+	
+	.about-image {
+		order: -1; /* Imagem sobe acima do texto */
+		width: 100%;
 	}
 
-	.about-image {
-		order: -1;
+	.about-text {
+		width: 100%;
 	}
 }

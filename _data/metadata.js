@@ -1,8 +1,8 @@
 export default {
-	title: "Eleventy Base Blog v9",
+	title: "Casa Mater",
 	url: "https://example.com/",
 	language: "en",
-	description: "I am writing about my experiences as a naval navel-gazer.",
+	description: "Casa Mater: acompañar y transformar la maternidad",
 	author: {
 		name: "Your Name Here",
 		email: "youremailaddress@example.com",
