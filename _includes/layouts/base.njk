@@ -26,11 +26,26 @@
     <nav>
       <ul class="nav">
         {%- for page in collections.all | eleventyNavigation %}
-          {%- set hasChildren = page.children | length > 0 %}
-          <li class="nav-item">
-            <a href="{{ page.url }}" {% if page.url == page.url %}aria-current="page"{% endif %}>
+          {%- set hasChildren = page.children and page.children.length > 0 %}
+
+          <li class="nav-item {% if hasChildren %}has-submenu{% endif %}">
+            
+            <a href="{{ page.url }}">
               {{ page.title }}
             </a>
+
+            {% if hasChildren %}
+              <ul class="submenu">
+                {% for child in page.children %}
+                  <li>
+                    <a href="{{ child.url }}">
+                      {{ child.title }}
+                    </a>
+                  </li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+
           </li>
         {%- endfor %}
       </ul>
