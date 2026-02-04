@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/img/logo.png">
   <title>{{ title or metadata.title }}</title>
   <meta name="description" content="{{ description or metadata.description }}">
   
@@ -19,7 +20,9 @@
 
   <!-- Header / Menu -->
   <header class="site-header">
-    <a href="/" class="site-logo">LOGO</a>
+    <div class="site-logo">
+      <img src="/img/logo.png" alt="logo" eleventy:ignore>
+    </div>    
     <nav>
       <ul class="nav">
         {%- for page in collections.all | eleventyNavigation %}
