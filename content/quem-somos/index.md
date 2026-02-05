@@ -6,6 +6,13 @@ eleventyNavigation:
   order: 2
 ---
 
+<div class="about-quote reveal">
+  <p>
+    <span class="quote-magenta">No deseamos cambiar lo que piensas,</span>
+    <span class="quote-green">pero lo que sabes</span>
+  </p>
+</div>
+
 <!-- JULIANA ALVES -->
 
 <div class="about-split">

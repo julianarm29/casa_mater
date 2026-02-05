@@ -668,6 +668,39 @@ body.quienes-somos .home-section {
 	padding-bottom: 4rem;
 }
 
+body.quienes-somos .about-quote {
+	max-width: 100%;
+	margin: 2rem auto 4rem;
+	padding: 1.5rem 1rem;
+	text-align: center;
+	background: transparent; 
+}
+
+body.quienes-somos .about-quote p {
+	margin: 0;
+	font-size: 2rem;
+	line-height: 1.6;
+	font-family: var(--font-family);
+}
+
+body.quienes-somos .quote-magenta {
+	color: #b44388;
+	font-weight: 600;
+}
+
+body.quienes-somos .quote-green {
+	color: #455e3e;
+	font-weight: 600;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+	body.quienes-somos .about-quote p {
+		font-size: 1.05rem;
+		padding: 0 1rem;
+	}
+}
+
 body.quienes-somos .brand-highlight {
 	color: #b44388;
 	font-weight: 600;
